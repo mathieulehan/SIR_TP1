@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2019-01-08T09:46:18.283">
+<file name="H:\eclipse-workspace\SIR_TP1\src\main\java\tp1\test\App.java">
+<violation beginline="17" endline="17" begincolumn="14" endcolumn="14" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="tp1.test" class="App" method="cancaner" variable="c" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'c'.
+</violation>
+<violation beginline="18" endline="18" begincolumn="13" endcolumn="14" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="tp1.test" class="App" method="cancaner" variable="nb" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'nb'.
+</violation>
+<violation beginline="32" endline="32" begincolumn="13" endcolumn="16" rule="UnconditionalIfStatement" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UnconditionalIfStatement" priority="3">
+Do not use if statements that are always true or always false
+</violation>
+<violation beginline="33" endline="33" begincolumn="21" endcolumn="24" rule="UnconditionalIfStatement" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UnconditionalIfStatement" priority="3">
+Do not use if statements that are always true or always false
+</violation>
+<violation beginline="34" endline="34" begincolumn="37" endcolumn="40" rule="UnconditionalIfStatement" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UnconditionalIfStatement" priority="3">
+Do not use if statements that are always true or always false
+</violation>
+<violation beginline="35" endline="35" begincolumn="45" endcolumn="48" rule="UnconditionalIfStatement" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UnconditionalIfStatement" priority="3">
+Do not use if statements that are always true or always false
+</violation>
+<violation beginline="36" endline="38" begincolumn="59" endcolumn="49" rule="EmptyIfStmt" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyIfStmt" priority="3">
+Avoid empty if statements
+</violation>
+<violation beginline="36" endline="36" begincolumn="53" endcolumn="56" rule="UnconditionalIfStatement" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UnconditionalIfStatement" priority="3">
+Do not use if statements that are always true or always false
+</violation>
+<violation beginline="38" endline="40" begincolumn="56" endcolumn="49" rule="EmptyIfStmt" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyIfStmt" priority="3">
+Avoid empty if statements
+</violation>
+<violation beginline="41" endline="43" begincolumn="48" endcolumn="41" rule="EmptyIfStmt" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyIfStmt" priority="3">
+Avoid empty if statements
+</violation>
+<violation beginline="44" endline="46" begincolumn="40" endcolumn="33" rule="EmptyIfStmt" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyIfStmt" priority="3">
+Avoid empty if statements
+</violation>
+<violation beginline="47" endline="49" begincolumn="32" endcolumn="25" rule="EmptyIfStmt" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyIfStmt" priority="3">
+Avoid empty if statements
+</violation>
+<violation beginline="51" endline="53" begincolumn="14" endcolumn="17" rule="EmptyIfStmt" ruleset="Basic Rules" package="tp1.test" class="App" method="manger" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyIfStmt" priority="3">
+Avoid empty if statements
+</violation>
+</file>
+</pmd>
