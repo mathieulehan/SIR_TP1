@@ -44,10 +44,10 @@
                     
                                           <h5>Project Documentation</h5>
                   <ul>
-                                                                                                                                                                                <li class="collapsed">
+                                                                                                                                                                                                  <li class="collapsed">
                           <a href="project-info.html" title="Project Information">Project Information</a>
                   </li>
-                                                                                                                                                                                                            <li class="expanded">
+                                                                                                                                                                                                                                                                  <li class="expanded">
                           <a href="project-reports.html" title="Project Reports">Project Reports</a>
                     <ul>
                       <li class="none">
@@ -70,6 +70,15 @@
             </li>
                       <li class="none">
                           <a href="cpd.html" title="CPD Report">CPD Report</a>
+            </li>
+                      <li class="none">
+                          <a href="changelog.html" title="Change Log">Change Log</a>
+            </li>
+                      <li class="none">
+                          <a href="file-activity.html" title="File Activity">File Activity</a>
+            </li>
+                      <li class="none">
+                          <a href="dev-activity.html" title="Developer Activity">Developer Activity</a>
             </li>
                       <li class="none">
             <strong>Checkstyle</strong>
@@ -100,7 +109,7 @@
 <tr class="b">
 <td>2</td>
 <td>0</td>
-<td>200</td>
+<td>233</td>
 <td>0</td></tr></table></div>
 <div class="section">
 <h2>Files<a name="Files"></a></h2>
@@ -113,12 +122,12 @@
 <tr class="b">
 <td><a href="#tp1.test.App.java">tp1/test/App.java</a></td>
 <td>0</td>
-<td>84</td>
+<td>119</td>
 <td>0</td></tr>
 <tr class="a">
 <td><a href="#tp1.test.JXBusyLabelTest.java">tp1/test/JXBusyLabelTest.java</a></td>
 <td>0</td>
-<td>116</td>
+<td>114</td>
 <td>0</td></tr></table></div>
 <div class="section">
 <h2>Rules<a name="Rules"></a></h2>
@@ -138,22 +147,24 @@
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
 <tr class="b">
 <td></td>
-<td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_blocks.html#LeftCurly">LeftCurly</a>
-<ul>
-<li>maxLineLength: <tt>&quot;100&quot;</tt></li></ul></td>
+<td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_blocks.html#LeftCurly">LeftCurly</a></td>
 <td>2</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
 <tr class="a">
 <td></td>
 <td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_blocks.html#RightCurly">RightCurly</a>
 <ul>
-<li>tokens: <tt>&quot;CLASS_DEF, METHOD_DEF, CTOR_DEF, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO, STATIC_INIT, INSTANCE_INIT&quot;</tt></li>
+<li>tokens: <tt>&quot;CLASS_DEF, METHOD_DEF, CTOR_DEF, LITERAL_FOR, LITERAL_WHILE, STATIC_INIT,                     INSTANCE_INIT&quot;</tt></li>
+<li>id: <tt>&quot;RightCurlyAlone&quot;</tt></li>
 <li>option: <tt>&quot;alone&quot;</tt></li></ul></td>
 <td>1</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
 <tr class="b">
 <td></td>
-<td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_blocks.html#RightCurly">RightCurly</a></td>
+<td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_blocks.html#RightCurly">RightCurly</a>
+<ul>
+<li>tokens: <tt>&quot;LITERAL_TRY, LITERAL_CATCH, LITERAL_FINALLY, LITERAL_IF, LITERAL_ELSE,                     LITERAL_DO&quot;</tt></li>
+<li>id: <tt>&quot;RightCurlySame&quot;</tt></li></ul></td>
 <td>1</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
 <tr class="a">
@@ -167,15 +178,6 @@
 <td>1</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
 <tr class="a">
-<td>imports</td>
-<td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_imports.html#CustomImportOrder">CustomImportOrder</a>
-<ul>
-<li>sortImportsInGroupAlphabetically: <tt>&quot;true&quot;</tt></li>
-<li>specialImportsRegExp: <tt>&quot;com.google&quot;</tt></li>
-<li>customImportOrderRules: <tt>&quot;STATIC###SPECIAL_IMPORTS###THIRD_PARTY_PACKAGE###STANDARD_JAVA_PACKAGE&quot;</tt></li></ul></td>
-<td>1</td>
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
-<tr class="b">
 <td>indentation</td>
 <td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_indentation.html#Indentation">Indentation</a>
 <ul>
@@ -185,9 +187,9 @@
 <li>basicOffset: <tt>&quot;2&quot;</tt></li>
 <li>braceAdjustment: <tt>&quot;0&quot;</tt></li>
 <li>lineWrappingIndentation: <tt>&quot;4&quot;</tt></li></ul></td>
-<td>84</td>
+<td>101</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
-<tr class="a">
+<tr class="b">
 <td>javadoc</td>
 <td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_javadoc.html#JavadocMethod">JavadocMethod</a>
 <ul>
@@ -200,29 +202,20 @@
 <li>allowedAnnotations: <tt>&quot;Override, Test&quot;</tt></li></ul></td>
 <td>4</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
-<tr class="b">
+<tr class="a">
 <td></td>
 <td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_javadoc.html#SummaryJavadoc">SummaryJavadoc</a>
 <ul>
 <li>forbiddenSummaryFragments: <tt>&quot;^@return the *|^This method returns |^A [{]@code [a-zA-Z0-9]+[}]( is a )&quot;</tt></li></ul></td>
 <td>2</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
-<tr class="a">
+<tr class="b">
 <td>naming</td>
 <td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_naming.html#AbbreviationAsWordInName">AbbreviationAsWordInName</a>
 <ul>
 <li>ignoreFinal: <tt>&quot;false&quot;</tt></li>
 <li>allowedAbbreviationLength: <tt>&quot;1&quot;</tt></li></ul></td>
 <td>1</td>
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
-<tr class="b">
-<td></td>
-<td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_naming.html#LocalVariableName">LocalVariableName</a>
-<ul>
-<li>format: <tt>&quot;^[a-z][a-z0-9][a-zA-Z0-9]*$&quot;</tt></li>
-<li>allowOneCharVarInForLoop: <tt>&quot;true&quot;</tt></li>
-<li>tokens: <tt>&quot;VARIABLE_DEF&quot;</tt></li></ul></td>
-<td>2</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
 <tr class="a">
 <td></td>
@@ -239,13 +232,6 @@
 <td>2</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
 <tr class="a">
-<td></td>
-<td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_naming.html#ParameterName">ParameterName</a>
-<ul>
-<li>format: <tt>&quot;^[a-z][a-z0-9][a-zA-Z0-9]*$&quot;</tt></li></ul></td>
-<td>1</td>
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
-<tr class="b">
 <td>sizes</td>
 <td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_sizes.html#LineLength">LineLength</a>
 <ul>
@@ -253,20 +239,25 @@
 <li>ignorePattern: <tt>&quot;^package.*|^import.*|a href|href|http://|https://|ftp://&quot;</tt></li></ul></td>
 <td>4</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
-<tr class="a">
+<tr class="b">
 <td>whitespace</td>
 <td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_whitespace.html#EmptyLineSeparator">EmptyLineSeparator</a>
 <ul>
 <li>allowNoEmptyLineBetweenFields: <tt>&quot;true&quot;</tt></li></ul></td>
 <td>2</td>
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
-<tr class="b">
+<tr class="a">
 <td></td>
 <td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_whitespace.html#FileTabCharacter">FileTabCharacter</a>
 <ul>
 <li>eachLine: <tt>&quot;true&quot;</tt></li></ul></td>
-<td>80</td>
+<td>96</td>
 <td><img src="images/icon_error_sml.gif" alt="" />&#160;Error</td></tr>
+<tr class="b">
+<td></td>
+<td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_whitespace.html#ParenPad">ParenPad</a></td>
+<td>4</td>
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td></tr>
 <tr class="a">
 <td></td>
 <td><a class="externalLink" href="http://checkstyle.sourceforge.net/config_whitespace.html#WhitespaceAround">WhitespaceAround</a>
@@ -314,6 +305,18 @@
 <td><a href="./xref/tp1/test/App.html#L9">9</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>ParenPad</td>
+<td>'(' is followed by whitespace.</td>
+<td><a href="./xref/tp1/test/App.html#L9">9</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>ParenPad</td>
+<td>')' is preceded with whitespace.</td>
+<td><a href="./xref/tp1/test/App.html#L9">9</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'method def lcurly' have incorrect indentation level 4, expected level should be 2.</td>
@@ -332,51 +335,51 @@
 <td><a href="./xref/tp1/test/App.html#L11">11</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>ParenPad</td>
+<td>'(' is followed by whitespace.</td>
+<td><a href="./xref/tp1/test/App.html#L11">11</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>ParenPad</td>
+<td>')' is preceded with whitespace.</td>
+<td><a href="./xref/tp1/test/App.html#L11">11</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'method def rcurly' have incorrect indentation level 4, expected level should be 2.</td>
+<td>'method def' child have incorrect indentation level 8, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L12">12</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'method def modifier' have incorrect indentation level 4, expected level should be 2.</td>
-<td><a href="./xref/tp1/test/App.html#L14">14</a></td></tr>
+<td>'method def rcurly' have incorrect indentation level 4, expected level should be 2.</td>
+<td><a href="./xref/tp1/test/App.html#L13">13</a></td></tr>
 <tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' have incorrect indentation level 4, expected level should be 2.</td>
+<td><a href="./xref/tp1/test/App.html#L15">15</a></td></tr>
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>javadoc</td>
 <td>JavadocMethod</td>
 <td>Missing a Javadoc comment.</td>
-<td><a href="./xref/tp1/test/App.html#L14">14</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'method def' child have incorrect indentation level 8, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L15">15</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L15">15</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'method def' child have incorrect indentation level 8, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L16">16</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L16">16</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>naming</td>
-<td>LocalVariableName</td>
-<td>Local variable name 'b' must match pattern '^[a-z][a-z0-9][a-zA-Z0-9]*$'.</td>
 <td><a href="./xref/tp1/test/App.html#L16">16</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
@@ -391,214 +394,226 @@
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L17">17</a></td></tr>
 <tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>naming</td>
-<td>LocalVariableName</td>
-<td>Local variable name 'c' must match pattern '^[a-z][a-z0-9][a-zA-Z0-9]*$'.</td>
-<td><a href="./xref/tp1/test/App.html#L17">17</a></td></tr>
-<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'method def' child have incorrect indentation level 8, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L18">18</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L18">18</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if' have incorrect indentation level 8, expected level should be 4.</td>
-<td><a href="./xref/tp1/test/App.html#L19">19</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
+<td>'method def' child have incorrect indentation level 8, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L19">19</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L19">19</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
+<td>'method def' child have incorrect indentation level 8, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L20">20</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L20">20</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L20">20</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L21">21</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L21">21</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
-<td><a href="./xref/tp1/test/App.html#L22">22</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L22">22</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L22">22</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if rcurly' have incorrect indentation level 16, expected level should be 4.</td>
+<td>'method def' child have incorrect indentation level 8, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L23">23</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L23">23</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L23">23</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if' have incorrect indentation level 8, expected level should be 4.</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L24">24</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L24">24</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
-<td><a href="./xref/tp1/test/App.html#L25">25</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L25">25</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L25">25</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
+<td>'method def' child have incorrect indentation level 8, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L26">26</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L26">26</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L26">26</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L27">27</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L27">27</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if rcurly' have incorrect indentation level 16, expected level should be 4.</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L28">28</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L28">28</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'method def rcurly' have incorrect indentation level 4, expected level should be 2.</td>
+<td>'method def' child have incorrect indentation level 8, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L29">29</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L29">29</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'method def modifier' have incorrect indentation level 4, expected level should be 2.</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L30">30</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L30">30</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/App.html#L31">31</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>javadoc</td>
-<td>JavadocMethod</td>
-<td>Missing a Javadoc comment.</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/App.html#L31">31</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child have incorrect indentation level 8, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L32">32</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L32">32</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L33">33</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L33">33</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L34">34</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L34">34</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L35">35</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L35">35</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if' have incorrect indentation level 8, expected level should be 4.</td>
-<td><a href="./xref/tp1/test/App.html#L32">32</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L32">32</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'if' have incorrect indentation level 16, expected level should be 6.</td>
-<td><a href="./xref/tp1/test/App.html#L33">33</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L33">33</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'if' have incorrect indentation level 32, expected level should be 8.</td>
-<td><a href="./xref/tp1/test/App.html#L34">34</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L34">34</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'if' have incorrect indentation level 40, expected level should be 10.</td>
-<td><a href="./xref/tp1/test/App.html#L35">35</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L35">35</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'if' have incorrect indentation level 48, expected level should be 12.</td>
 <td><a href="./xref/tp1/test/App.html#L36">36</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
@@ -608,10 +623,10 @@
 <td><a href="./xref/tp1/test/App.html#L36">36</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>blocks</td>
-<td>EmptyBlock</td>
-<td>Empty if block.</td>
-<td><a href="./xref/tp1/test/App.html#L36">36</a></td></tr>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
+<td><a href="./xref/tp1/test/App.html#L37">37</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
@@ -622,7 +637,7 @@
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'if rcurly' have incorrect indentation level 48, expected level should be 12.</td>
+<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
 <td><a href="./xref/tp1/test/App.html#L38">38</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
@@ -632,187 +647,367 @@
 <td><a href="./xref/tp1/test/App.html#L38">38</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>blocks</td>
-<td>EmptyBlock</td>
-<td>Empty else block.</td>
-<td><a href="./xref/tp1/test/App.html#L38">38</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'else rcurly' have incorrect indentation level 48, expected level should be 12.</td>
-<td><a href="./xref/tp1/test/App.html#L40">40</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L40">40</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'if rcurly' have incorrect indentation level 40, expected level should be 10.</td>
-<td><a href="./xref/tp1/test/App.html#L41">41</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L41">41</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>blocks</td>
-<td>EmptyBlock</td>
-<td>Empty else block.</td>
-<td><a href="./xref/tp1/test/App.html#L41">41</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'else rcurly' have incorrect indentation level 40, expected level should be 10.</td>
-<td><a href="./xref/tp1/test/App.html#L43">43</a></td></tr>
+<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
+<td><a href="./xref/tp1/test/App.html#L39">39</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L43">43</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'if rcurly' have incorrect indentation level 32, expected level should be 8.</td>
-<td><a href="./xref/tp1/test/App.html#L44">44</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L44">44</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>blocks</td>
-<td>EmptyBlock</td>
-<td>Empty else block.</td>
-<td><a href="./xref/tp1/test/App.html#L44">44</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'else rcurly' have incorrect indentation level 32, expected level should be 8.</td>
-<td><a href="./xref/tp1/test/App.html#L46">46</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L46">46</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'if rcurly' have incorrect indentation level 24, expected level should be 6.</td>
-<td><a href="./xref/tp1/test/App.html#L47">47</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L47">47</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>blocks</td>
-<td>EmptyBlock</td>
-<td>Empty else block.</td>
-<td><a href="./xref/tp1/test/App.html#L47">47</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'else rcurly' have incorrect indentation level 24, expected level should be 6.</td>
-<td><a href="./xref/tp1/test/App.html#L49">49</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L49">49</a></td></tr>
+<td><a href="./xref/tp1/test/App.html#L39">39</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if rcurly' have incorrect indentation level 16, expected level should be 4.</td>
-<td><a href="./xref/tp1/test/App.html#L50">50</a></td></tr>
+<td><a href="./xref/tp1/test/App.html#L40">40</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L50">50</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>blocks</td>
-<td>RightCurly</td>
-<td>'}' at column 3 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else or try/catch/finally).</td>
-<td><a href="./xref/tp1/test/App.html#L50">50</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>indentation</td>
-<td>Indentation</td>
-<td>'else' have incorrect indentation level 8, expected level should be 4.</td>
-<td><a href="./xref/tp1/test/App.html#L51">51</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>whitespace</td>
-<td>FileTabCharacter</td>
-<td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L51">51</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>blocks</td>
-<td>EmptyBlock</td>
-<td>Empty else block.</td>
-<td><a href="./xref/tp1/test/App.html#L51">51</a></td></tr>
+<td><a href="./xref/tp1/test/App.html#L40">40</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
-<td>'else rcurly' have incorrect indentation level 16, expected level should be 4.</td>
-<td><a href="./xref/tp1/test/App.html#L53">53</a></td></tr>
+<td>'if' have incorrect indentation level 8, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L41">41</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
-<td><a href="./xref/tp1/test/App.html#L53">53</a></td></tr>
+<td><a href="./xref/tp1/test/App.html#L41">41</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
+<td><a href="./xref/tp1/test/App.html#L42">42</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L42">42</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
+<td><a href="./xref/tp1/test/App.html#L43">43</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L43">43</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
+<td><a href="./xref/tp1/test/App.html#L44">44</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L44">44</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if rcurly' have incorrect indentation level 16, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L45">45</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L45">45</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'method def rcurly' have incorrect indentation level 4, expected level should be 2.</td>
-<td><a href="./xref/tp1/test/App.html#L54">54</a></td></tr></table></div>
+<td><a href="./xref/tp1/test/App.html#L46">46</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' have incorrect indentation level 4, expected level should be 2.</td>
+<td><a href="./xref/tp1/test/App.html#L48">48</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>javadoc</td>
+<td>JavadocMethod</td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/tp1/test/App.html#L48">48</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' have incorrect indentation level 8, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L49">49</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L49">49</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' have incorrect indentation level 16, expected level should be 6.</td>
+<td><a href="./xref/tp1/test/App.html#L50">50</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L50">50</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' have incorrect indentation level 32, expected level should be 8.</td>
+<td><a href="./xref/tp1/test/App.html#L51">51</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L51">51</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' have incorrect indentation level 40, expected level should be 10.</td>
+<td><a href="./xref/tp1/test/App.html#L52">52</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L52">52</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' have incorrect indentation level 48, expected level should be 12.</td>
+<td><a href="./xref/tp1/test/App.html#L53">53</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L53">53</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>blocks</td>
+<td>EmptyBlock</td>
+<td>Empty if block.</td>
+<td><a href="./xref/tp1/test/App.html#L53">53</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L54">54</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if rcurly' have incorrect indentation level 48, expected level should be 12.</td>
+<td><a href="./xref/tp1/test/App.html#L55">55</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L55">55</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>blocks</td>
+<td>EmptyBlock</td>
+<td>Empty else block.</td>
+<td><a href="./xref/tp1/test/App.html#L55">55</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'else rcurly' have incorrect indentation level 48, expected level should be 12.</td>
+<td><a href="./xref/tp1/test/App.html#L57">57</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L57">57</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if rcurly' have incorrect indentation level 40, expected level should be 10.</td>
+<td><a href="./xref/tp1/test/App.html#L58">58</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L58">58</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>blocks</td>
+<td>EmptyBlock</td>
+<td>Empty else block.</td>
+<td><a href="./xref/tp1/test/App.html#L58">58</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'else rcurly' have incorrect indentation level 40, expected level should be 10.</td>
+<td><a href="./xref/tp1/test/App.html#L60">60</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L60">60</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if rcurly' have incorrect indentation level 32, expected level should be 8.</td>
+<td><a href="./xref/tp1/test/App.html#L61">61</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L61">61</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>blocks</td>
+<td>EmptyBlock</td>
+<td>Empty else block.</td>
+<td><a href="./xref/tp1/test/App.html#L61">61</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'else rcurly' have incorrect indentation level 32, expected level should be 8.</td>
+<td><a href="./xref/tp1/test/App.html#L63">63</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L63">63</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if rcurly' have incorrect indentation level 24, expected level should be 6.</td>
+<td><a href="./xref/tp1/test/App.html#L64">64</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L64">64</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>blocks</td>
+<td>EmptyBlock</td>
+<td>Empty else block.</td>
+<td><a href="./xref/tp1/test/App.html#L64">64</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'else rcurly' have incorrect indentation level 24, expected level should be 6.</td>
+<td><a href="./xref/tp1/test/App.html#L66">66</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L66">66</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if rcurly' have incorrect indentation level 16, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L67">67</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L67">67</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>blocks</td>
+<td>RightCurly</td>
+<td>'}' at column 3 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else or try/catch/finally).</td>
+<td><a href="./xref/tp1/test/App.html#L67">67</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'else' have incorrect indentation level 8, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L68">68</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L68">68</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>blocks</td>
+<td>EmptyBlock</td>
+<td>Empty else block.</td>
+<td><a href="./xref/tp1/test/App.html#L68">68</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'else rcurly' have incorrect indentation level 16, expected level should be 4.</td>
+<td><a href="./xref/tp1/test/App.html#L70">70</a></td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>whitespace</td>
+<td>FileTabCharacter</td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/tp1/test/App.html#L70">70</a></td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' have incorrect indentation level 4, expected level should be 2.</td>
+<td><a href="./xref/tp1/test/App.html#L71">71</a></td></tr></table></div>
 <div class="section">
 <h3 id="tp1.test.JXBusyLabelTest.java">tp1/test/JXBusyLabelTest.java</h3>
 <table border="0" class="bodyTable">
-<tr class="a">
+<tr class="b">
 <th>Severity</th>
 <th>Category</th>
 <th>Rule</th>
 <th>Message</th>
 <th>Line</th></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>naming</td>
 <td>PackageName</td>
 <td>Package name 'tp1.test' must match pattern '^[a-z]+(\.[a-z][a-z0-9]*)*$'.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L1">1</a></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>imports</td>
-<td>CustomImportOrder</td>
-<td>Import statement for 'org.jdesktop.swingx.JXBusyLabel' is in the wrong order. Should be in the 'THIRD_PARTY_PACKAGE' group, expecting not assigned imports on this line.</td>
-<td><a href="./xref/tp1/test/JXBusyLabelTest.html#L13">13</a></td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>naming</td>
@@ -1301,197 +1496,191 @@
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L59">59</a></td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
-<td>naming</td>
-<td>ParameterName</td>
-<td>Parameter name 'e' must match pattern '^[a-z][a-z0-9][a-zA-Z0-9]*$'.</td>
-<td><a href="./xref/tp1/test/JXBusyLabelTest.html#L59">59</a></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if' have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L60">60</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L60">60</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L61">61</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
 <td>Line is longer than 100 characters (found 108).</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L61">61</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L61">61</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>WhitespaceAround</td>
 <td>WhitespaceAround: '-' is not preceded with whitespace.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L61">61</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>WhitespaceAround</td>
 <td>WhitespaceAround: '-' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L61">61</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if rcurly' have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L62">62</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L62">62</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L63">63</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
 <td>Line is longer than 100 characters (found 113).</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L63">63</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L63">63</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>WhitespaceAround</td>
 <td>WhitespaceAround: '-' is not preceded with whitespace.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L63">63</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>WhitespaceAround</td>
 <td>WhitespaceAround: '-' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L63">63</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if rcurly' have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L64">64</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L64">64</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L65">65</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L65">65</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if rcurly' have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L66">66</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L66">66</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if' child have incorrect indentation level 24, expected level should be 6.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L67">67</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L67">67</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'if rcurly' have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L68">68</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L68">68</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'method def rcurly' have incorrect indentation level 8, expected level should be 2.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L69">69</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L69">69</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'method def modifier' have incorrect indentation level 8, expected level should be 2.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L71">71</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L71">71</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'method def' child have incorrect indentation level 16, expected level should be 4.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L72">72</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
 <td>Line contains a tab character.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L72">72</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>indentation</td>
 <td>Indentation</td>
 <td>'method def rcurly' have incorrect indentation level 8, expected level should be 2.</td>
 <td><a href="./xref/tp1/test/JXBusyLabelTest.html#L73">73</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" />&#160;Warning</td>
 <td>whitespace</td>
 <td>FileTabCharacter</td>
